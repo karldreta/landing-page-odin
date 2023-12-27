@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    /* Always set the height to 100vh so 
+    .footer can move all the way down there. Also set margin to 0px */
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Centers the header and the footer */
+    align-items: center;
+    background-color: #dee2e6;
+}
+
+button:hover {
+    scale: 1.2;
+}
+
+/* Begin header */
+
+.header {
+    /* Separates the  Logo and Nav-bars */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.header > div {
+    /* Separates the Logo and the Name */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header img {
+    max-width: 40px;
+    min-width: 40px;
+}
+
+.header p {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+
+/* Begin nav-bars */
+
+.header ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 45px;
+}
+
+.header a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.header a:hover {
+    /* For quasi-responsiveness. Note: also add padding to the original state to
+    prevent the <a> from growing and affecting it's siblings */
+    padding: 5px 10px;
+    background-color: #e01e37;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Begin sections */
+
+.sections {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60vw;
+}
+
+/* Begin 1st section */
+
+.section.one {
+    display: flex; 
+    flex: 1;
+    justify-content: space-between;
+}
+
+.section.one .right1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    width: 45%;
+}
+
+.section.one .right1 h2 {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.section.one .right1 p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.section.one .left1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 55%;
+}
+
+.section.one img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.section.one button {
+    background-color: #e01e37;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    color: white;
+}
+
+/* Begin 2nd Section */
+
+.section.two {
+    width: 100vw;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.section.two h3 {
+    font-size: 30px;
+}
+
+.section.two .showcase {
+    /* This is the parent element of the four children.
+    Horizontally aligns the boxes */
+    display: flex;
+    gap: 50px;
+}
+
+.section.two .case {
+    /* These are individual boxes and they are all siblings. 
+    Vertically aligns the box with the <p> */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    max-width: 100px;
+
+}
+
+.section.two .case div {
+    /* this creates the red boxes */
+    border: 3px solid #e01e37;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section.two .case div:hover {
+    scale: 1.1;
+    cursor: not-allowed;
+}
+
+
+
+/* Begin 3rd section */
+
+.section.three {
+    background-color: #212529cd;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.section.three blockquote {
+    color: #f2f2f2;
+    width: 500px;
+}
+
+.section.three blockquote div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section.three blockquote div h3 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.section.three blockquote div p {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Begin 4th Section */
+
+ .section.four {
+    background-color: #f8f9fa;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+ }
+
+ .section.four .banner {
+    /* This creates the banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px 60px;
+    background: #212529;
+    color: white;
+    border-radius: 5px; 
+ }
+
+ .section.four .banner button {
+    padding: 10px;
+    background-color: #990100;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+ }
+
+ .footer {
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px 0px;
+ }
